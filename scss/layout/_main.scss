@@ -5,9 +5,15 @@ body{
 }
 
 .l-main{
-	padding: 4em 0;
-	.not-front &{
+	padding: 2em 0;
+	@media #{$medium-up}{
 		padding: 4em 0;
+	}
+	.not-front &{
+		padding: 2em 0;
+		@media #{$medium-up}{
+			padding: 4em 0;
+		}	
 	}
 	.front &{
 		background: url(../images/front_bkgd_blue.jpg) center 0 no-repeat;

@@ -1,0 +1,44 @@
+/////////////////////////////////////////////
+// Zurb Foundation specific settings
+/////////////////////////////////////////////
+
+// Only load the parts of Foundation that we need.
+// Bloat be gone!
+
+// These are on by default for the start of every project.
+$include-html-classes: true;
+$include-print-styles: true;
+$include-html-global-classes: true;
+$include-html-grid-classes: true;
+$include-html-type-classes: true;
+$include-html-alert-classes: true;
+
+// These are all optional
+$include-open-sans: false;
+$include-html-accordion-classes: false;
+$include-html-nav-classes: false;
+$include-html-button-classes: false;
+$include-html-clearing-classes: false;
+$include-html-dropdown-classes: false;
+$include-html-media-classes: true;
+$include-html-form-classes: false;
+$include-html-inline-list-classes: false;
+$include-html-joyride-classes: false;
+$include-html-label-classes: false;
+$include-html-magellan-classes: false;
+$include-html-orbit-classes: false;
+$include-html-panel-classes: false;
+$include-html-pricing-classes: false;
+$include-html-reveal-classes: true;
+$include-html-table-classes: false;
+$include-html-tabs-classes: true;
+$include-html-tooltip-classes: false;
+$include-html-top-bar-classes: false;
+$include-html-visibility-classes: true;
+
+$small-range: (0em, 45em);
+$medium-range: (45.063em, 59em);
+$large-range: (59.063em, 90em);
+$xlarge-range: (90.063em, 120em);
+$xxlarge-range: (120.063em);
+

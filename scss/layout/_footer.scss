@@ -3,8 +3,16 @@
 .l-footer{
 	background: #222;
 	color: white;
-	padding: 2rem 0 0;
+	padding: 2rem 1rem 0;
 	text-align: center;
+	a{
+		@extend %default-transition;
+		color: $cyan;
+		font-family: 'titilliumregular', sans-serif;
+		&:hover{
+			color: darken($cyan, 20%);
+		}
+	}
 	h2{
 		font-family: 'titilliumregular', sans-serif;
 		font-size: rem-calc(34);
@@ -14,6 +22,12 @@
 	h3{
 		font-family: 'titilliumregular', sans-serif;
 		font-size: rem-calc(24);
+		color: white;
+		margin-bottom: 0.5rem;
+	}
+	h4{
+		font-family: 'titilliumregular', sans-serif;
+		font-size: rem-calc(18);
 		color: white;
 		margin-bottom: 0.5rem;
 	}
@@ -27,3 +41,41 @@
 		font-size: .75rem;
 	}
 }
+#saskatoontab{
+	display: block;
+}
+#medhattab{
+	display: none;
+}
+#lloydtab{
+	display: none;
+}
+.tabs{
+	margin-left: auto;
+	text-align: center;
+	.tab-title {
+		float: none;
+		display: inline-block;
+		&:first-child a{
+			border-radius: .5rem 0 0 .5rem;
+		}
+		&:last-child a{
+			border-radius: 0 .5rem .5rem 0;
+		}
+		margin-right: -4px; 
+		a {
+			padding: .25rem .5rem;
+			background: $black;
+			color: white;
+			border: 2px solid $cyan;
+			&:hover{
+				background: rgba($cyan, 10%);
+			}
+		}
+		&.active>a {
+			border: 2px solid $cyan;
+			background: $cyan;
+			color: $black;
+		}
+	}
+} 

@@ -3,6 +3,14 @@
 .l-tertiary{
 	background: #222;
 	padding: .5rem 0;
+	a{
+		@extend %default-transition;
+		color: $cyan;
+		font-family: 'titilliumregular', sans-serif;
+		&:hover{
+			color: darken($cyan, 20%);
+		}
+	}
 	p{
 		color: white;
 		float: left;

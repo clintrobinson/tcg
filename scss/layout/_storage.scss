@@ -3,17 +3,16 @@
 		background: url(../images/rentals_bkgd.png) center 300px no-repeat #ccc !important;
 	}
 	a{
-		color: white;
-		text-transform: uppercase;
-		font-size: rem-calc(16);
-		font-family: 'titilliumbold', sans-serif;
-		.button{
+		&.button{
+			font-family: 'titilliumbold', sans-serif;
+			font-size: rem-calc(16);
+			color: white;
+			text-transform: uppercase;
 			background: $cyan;
-			padding: .25rem .5rem;
 			margin: 0;
 			border: 2px solid $cyan;
 			@media #{$medium-up}{
-				margin-left: 1rem;
+				//margin-left: 1rem;
 			}
 			@media (min-width: 1000px){
 				padding: .5rem 1rem;
@@ -24,6 +23,15 @@
 				background: black !important;
 				border: 2px solid white !important;
 			}
+		}
+	}
+	.panels-flexible-rentals{
+		padding-left: 0.9375rem;
+		padding-right: 0.9375rem;
+	}
+	.panels-flexible-row-rentals-1{
+		h1{
+			margin: 0 -.9375rem 1rem;
 		}
 	}
 }

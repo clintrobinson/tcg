@@ -1,13 +1,22 @@
 table{
 	thead{
-		background: black;
+		background: #222;
 		tr{
 			td, th{
 				color: white;
 				font-weight: bold;
+				padding: .25rem;
 			}
 			
 		}
 		
+	}
+	tr{
+		td, th{
+			padding: .25rem;
+		}	
+	}
+	a{
+		color: darken($cyan, 20%);
 	}
 }

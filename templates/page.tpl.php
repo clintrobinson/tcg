@@ -3,10 +3,10 @@
   <div class="l-tertiary hide-for-small">
     <div class="row">
       <div class="large-12 columns">
-        <p>Saskatoon, SK</p>
+        <p class="business-list"><a href="/salespricing">Saskatoon, SK</a> | <a href="/medicinehatsalespricing">Medicine Hat, AB</a> | <a href="/lloydminstersalespricing">Lloydminster, SK</a> | <a href="/reginasalespricing">Regina, SK</a> | <a href="/calgarysalespricing">Calgary, AB</a> | <a href="/edmontonsalespricing">Edmonton, AB</a></p>
         <ul>
           <li><a class="find-us" href="">Find Us</a></li>
-          <li><a class="contact-us" href="">Contact Us</a></li>
+          <li><a class="contact-us" href="/contact-us">Contact Us</a></li>
         </ul>
       </div>
     </div>
@@ -41,7 +41,7 @@
 
     <!-- Title, slogan and menu -->
     <?php if ($alt_header): ?>
-    
+
     <section class=" <?php print $alt_header_classes; ?> l-header group">
       <div class="nav-toggle hide-for-medium-up"><span></span></div>
       <div class="row">
@@ -63,11 +63,7 @@
             <?php endif; ?>
           <?php endif; ?>
 
-          <?php if ($site_slogan): ?>
-            <h2 title="<?php print $site_slogan; ?>" class="site-slogan"><?php print $site_slogan; ?></h2>
-          <?php endif; ?>
-          <div class="row collapse">
-            <div class="large-12 columns">
+
             <?php if ($alt_main_menu): ?>
               <nav class="l-nav" id="main-menu" class="navigation" role="navigation">
                 <?php print ($alt_main_menu); ?>
@@ -75,12 +71,11 @@
               </nav> <!-- /#main-menu -->
 
             <?php endif; ?>
-          </div>
-          </div>
+
         </div>
       </div>
-      
-      
+
+
     </section>
     <section class=" <?php print $alt_header_classes; ?> l-header-animated animated-header group">
       <div class="row">
@@ -88,7 +83,7 @@
           <?php if ($linked_logo): print $linked_logo; endif; ?>
         </div>
         <div class="large-10 medium-10 small-12 nav-wrap columns">
-          
+
           <div class="row collapse">
             <div class="large-12 columns">
             <?php if ($alt_main_menu): ?>
@@ -101,7 +96,7 @@
         </div>
       </div>
     </section>
-    
+
     <?php if ($alt_secondary_menu): ?>
       <nav id="secondary-menu" class="navigation" role="navigation">
         <?php print $alt_secondary_menu; ?>
@@ -122,13 +117,17 @@
       </section>
       <!--/.l-featured -->
     <?php endif; ?>
-
+    <div class="slider">
+      <div class="slide1"></div>
+      <div class="slide2"></div>
+      <div class="slide3"></div>
+    </div>
   </header>
   <!--/.l-header -->
 
-  
 
-  
+
+
 
   <?php if (!empty($page['help'])): ?>
     <!--/.l-help -->
@@ -175,8 +174,8 @@
           </div>
         <?php endif; ?>
 
-        
-        
+
+
         <?php if ($title && !$is_front): ?>
           <?php print render($title_prefix); ?>
           <h1 id="page-title" class="title"><?php print $title; ?></h1>
@@ -213,7 +212,7 @@
   </main>
   <!--/.main-->
 
-  
+
 
   <?php if (!empty($page['footer_firstcolumn']) || !empty($page['footer_secondcolumn']) || !empty($page['footer_thirdcolumn']) || !empty($page['footer_fourthcolumn'])): ?>
     <!--.footer-columns -->
@@ -261,8 +260,6 @@
   <!--/.footer-->
 
   <?php if ($messages && $zurb_foundation_messages_modal): print $messages; endif; ?>
-  <script>
-  
-  </script>
+
 </div>
 <!--/.page -->

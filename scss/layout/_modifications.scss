@@ -1,7 +1,15 @@
 // Non-modular or client styles for modifications.
 .page-modifications{
+	h3 {
+		border-bottom: 3px solid #222;
+		font-size: 1.3rem;
+	}
+	.view-header{
+		padding-left: 0.9375rem;
+		padding-right: 0.9375rem;
+	}
 	.views-row{
-		@include grid-row();
+		@include grid-row($behavior: collapse);
 		max-width: 75rem;
 		margin-bottom: 1rem;
 		.title{
@@ -13,6 +21,7 @@
 				border-bottom: 5px solid black;
 				text-transform: uppercase;
 				margin-bottom: 1rem;
+				margin-top: 2rem;
 			}
 		}
 		.field-content{
@@ -37,5 +46,101 @@
 				);
 			}
 		}
-	}	
+	}
+	.view-modifications-header{
+		h3{
+			margin-top: 1rem;
+		}
+		.views-row{
+			margin-bottom: 0;
+		}
+	}
+}
+
+.page-mods{
+	.view-header{
+		padding-left: 0.9375rem;
+		padding-right: 0.9375rem;
+	}
+	.views-row{
+		@include grid-row($behavior: collapse);
+		max-width: 75rem;
+		margin-bottom: 1rem;
+		.title{
+			@include grid-column(12);
+
+			h2 {
+				font-size: 1.75rem;
+				line-height: 2rem;
+				border-bottom: 5px solid black;
+				text-transform: uppercase;
+				margin-bottom: 1rem;
+				margin-top: 2rem;
+			}
+		}
+		.field-content{
+			@include grid-column(12);
+			@media #{$medium-up}{
+				@include grid-column(
+			    // Control the number of columns
+			    $columns:8,
+			    
+			    $push:4
+				);
+			}
+		}
+		.field-mod-image{
+			@include grid-column(12);
+			@media #{$medium-up}{
+				@include grid-column(
+			    // Control the number of columns
+			    $columns:4,
+			    
+			    $pull:8
+				);
+			}
+		}
+	}
+	.view-modifications-header{
+		h3{
+			margin-top: 1rem;
+		}
+		.views-row{
+			margin-bottom: 0;
+		}
+	}
+}
+
+
+.page-mods{
+	h4{
+		font-size: 1.2rem;
+	}
+	h3 {
+		//border-bottom: 3px solid #222;
+		font-size: 1.5rem;
+		margin-top: 2rem;
+		.field-category .field-wrapper{
+			border-bottom: none;
+		}
+	}
+	h2.node-title{
+		display: none;
+	}
+	.panel-pane{
+		margin-bottom: 2rem;
+	}
+	.mod-gallery{
+		h2{
+			background: #222;
+		    border-left: 10px solid #1DDBD9;
+		    line-height: 3rem;
+		    color: white;
+		    padding: 0.5rem 1rem .75rem;
+		    margin-bottom: 1rem;
+		    border-bottom: none;
+		    text-transform: none;
+		    font-size: 2.75rem;
+		}
+	}
 }
