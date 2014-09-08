@@ -1,0 +1,12 @@
+// Non-modular or client styles for .l-footer region.
+
+.l-footer{
+	background: url(../images/header_bkgd.png) repeat;
+	padding: 2rem 0;
+	.block{
+		@include grid-column(12);
+		@media #{$medium-up}{
+			@include grid-column(4);
+		}
+	}
+}

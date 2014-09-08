@@ -1,0 +1,23 @@
+// Non-modular or client styles for the .l-nav region.
+
+.l-nav{
+	background: #333;
+	ul{
+		margin-bottom: 0;
+		li{
+			@extend %default-transition;
+			text-align: center;
+			background: #333;
+			padding: 1rem;
+			margin-left: 0;
+			border-right: 2px solid #222;
+			border-left: 2px solid #222;
+			&:hover{
+				background: #222;
+			}
+			a{
+				color: white;
+			}
+		}
+	}
+}

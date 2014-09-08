@@ -1,0 +1,27 @@
+// Non-modular or client styles for the .l-content region.
+
+body{
+	background: #ccc
+}
+
+.l-main{
+	padding: 3em 0;
+	.front &{
+		background: url(../images/front_bkgd.jpg) center 0 no-repeat;
+		height: 300px;
+		text-align: center;
+		h3{
+			text-transform: uppercase;
+			font-family: 'Sarpanch', sans-serif;
+			font-weight: 700;
+			color: $dkred;
+			font-size: rem-calc(40);
+			line-height: 2.4rem;
+		}
+		h4{
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 700;
+			color: #222;
+		}
+	}
+}
