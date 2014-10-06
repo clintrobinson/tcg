@@ -49,7 +49,6 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
   <?php print $head; ?>
-  <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700|Open+Sans:300italic,800italic,300,700,800,400|Sarpanch:700,900' rel='stylesheet' type='text/css'>
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
   <?php print $scripts; ?>

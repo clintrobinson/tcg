@@ -28,46 +28,50 @@
       <?php endif; ?>
       <!--/.top-bar -->
     <?php endif; ?>
-
+    <div class="top-info">
+      <p><img src="/TCG/sites/all/themes/TCG/images/wheat.png" alt="">Saskatchewan Owned and Operated</p>
+    </div>
     <!-- Title, slogan and menu -->
     <?php if ($alt_header): ?>
+    
     <section class=" <?php print $alt_header_classes; ?> l-header">
       <div class="row">
         <div class="large-3 columns">
           <?php if ($linked_logo): print $linked_logo; endif; ?>
         </div>
+        <div class="large-9 columns">
+          <?php if ($site_name): ?>
+            <?php if ($title): ?>
+              <div id="site-name" class="element-invisible">
+                <strong>
+                  <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
+                </strong>
+              </div>
+            <?php else: /* Use h1 when the content title is empty */ ?>
+              <h1 id="site-name">
+                <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
+              </h1>
+            <?php endif; ?>
+          <?php endif; ?>
+
+          <?php if ($site_slogan): ?>
+            <h2 title="<?php print $site_slogan; ?>" class="site-slogan"><?php print $site_slogan; ?></h2>
+          <?php endif; ?>
+          <div class="row collapse">
+            <div class="large-12 columns">
+            <?php if ($alt_main_menu): ?>
+              <nav class="l-nav" id="main-menu" class="navigation" role="navigation">
+                <?php print ($alt_main_menu); ?>
+              </nav> <!-- /#main-menu -->
+            <?php endif; ?>
+          </div>
+          </div>
+        </div>
       </div>
       
+      
     </section>
-    <section class="l-nav">
-      <?php if ($site_name): ?>
-        <?php if ($title): ?>
-          <div id="site-name" class="element-invisible">
-            <strong>
-              <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
-            </strong>
-          </div>
-        <?php else: /* Use h1 when the content title is empty */ ?>
-          <h1 id="site-name">
-            <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
-          </h1>
-        <?php endif; ?>
-      <?php endif; ?>
-
-      <?php if ($site_slogan): ?>
-        <h2 title="<?php print $site_slogan; ?>" class="site-slogan"><?php print $site_slogan; ?></h2>
-      <?php endif; ?>
-      <div class="row">
-        <div class="large-12 columns">
-        <?php if ($alt_main_menu): ?>
-          <nav id="main-menu" class="navigation" role="navigation">
-            <?php print ($alt_main_menu); ?>
-          </nav> <!-- /#main-menu -->
-        <?php endif; ?>
-      </div>
-      </div>
-        
-    </section>
+    
     <?php if ($alt_secondary_menu): ?>
       <nav id="secondary-menu" class="navigation" role="navigation">
         <?php print $alt_secondary_menu; ?>
@@ -76,15 +80,7 @@
     <?php endif; ?>
     <!-- End title, slogan and menu -->
 
-    <?php if (!empty($page['header'])): ?>
-      <!--.l-header-region -->
-      <section class="l-header-region row">
-        <div class="large-12 columns">
-          <?php print render($page['header']); ?>
-        </div>
-      </section>
-      <!--/.l-header-region -->
-    <?php endif; ?>
+    
 
   </header>
   <!--/.l-header -->
@@ -92,6 +88,7 @@
   <?php if (!empty($page['featured'])): ?>
     <!--/.featured -->
     <section class="l-featured ">
+      <div class="overlay"></div>
       <div class="row">
         <div class="large-12 columns">
           <?php print render($page['featured']); ?>
@@ -101,7 +98,15 @@
     <!--/.l-featured -->
   <?php endif; ?>
 
-  
+  <?php if (!empty($page['header'])): ?>
+    <!--.l-header-region -->
+    <section class="l-header-region row">
+      <div class="large-12 columns">
+        <?php print render($page['header']); ?>
+      </div>
+    </section>
+    <!--/.l-header-region -->
+  <?php endif; ?>
 
   <?php if (!empty($page['help'])): ?>
     <!--/.l-help -->
@@ -234,12 +239,7 @@
 
   <?php if ($messages && $zurb_foundation_messages_modal): print $messages; endif; ?>
   <script>
-  jQuery(document).ready(function($) {
-    $('#main-menu-links').addClass('large-block-grid-5');
-    var str = $( ".links li a" ).text();
-    $( ".links li a" ).wrapInner( "<span></span>");
-    $('.links li a span').attr('data-hover', str);
-  });
+  
   </script>
 </div>
 <!--/.page -->

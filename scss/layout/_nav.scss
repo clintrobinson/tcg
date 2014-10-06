@@ -1,23 +1,43 @@
 // Non-modular or client styles for the .l-nav region.
 
 .l-nav{
-	background: #333;
+	text-align: right;
+	float: right;
+	&:before {
+	  content: '';
+	  display: inline-block;
+	  height: 100%;
+	  vertical-align: middle;
+	  margin-right: -0.25em; /* Adjusts for spacing */
+	}
+	.inline-list{
+		margin-left: 0;
+	}
 	ul{
 		margin-bottom: 0;
 		li{
 			@extend %default-transition;
-			text-align: center;
-			background: #333;
-			padding: 1rem;
+			padding: .5rem 1rem;;
 			margin-left: 0;
-			border-right: 2px solid #222;
-			border-left: 2px solid #222;
-			&:hover{
-				background: #222;
-			}
+			
+			
 			a{
-				color: white;
+				color: $black;
+				font-size: rem-calc(24);
+				font-family: 'enigmaticbold', sans-serif;
 			}
 		}
 	}
+}
+
+.top-info{
+	height: 35px;
+	padding: .5rem;
+	width: 100%;
+	text-align:center;
+	background: #222;
+	p{
+		color: white;
+	}
+
 }
