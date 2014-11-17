@@ -64,16 +64,26 @@
 // Layout
 // Each section of the document has it's own partial seperated out to improve
 // developer experience. Additionally, grids can be declared in layouts as well.
+@import "layout/banner";
 @import "layout/header";
 @import "layout/nav";
+@import "layout/callout";
 @import "layout/main";
 @import "layout/featured";
 @import "layout/aside";
 @import "layout/footer";
+@import "layout/tertiary";
+@import "layout/rentals";
+@import "layout/modifications";
+@import "layout/storage";
 
 // Modules
 // @import "modules/block";
 @import "modules/button";
+@import "modules/m-QuoteModal";
+@import "modules/m-Footable";
+@import "modules/form";
+@import "modules/table";
 
 // States
 // @import "states/collapse";

@@ -1,0 +1,19 @@
+// Non-modular or client styles for .l-featured region.
+
+.l-tertiary{
+	background: #222;
+	padding: .5rem 0;
+	p{
+		color: white;
+		float: left;
+		margin-bottom: 0;
+	}
+	ul{
+		float: right;
+		margin: 0;
+		li{
+			display: inline;
+			padding-left: 1rem;
+		}
+	}
+}

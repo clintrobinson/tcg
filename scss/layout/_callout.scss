@@ -1,0 +1,28 @@
+// Non-modular or client styles for .l-featured region.
+
+.l-callout{
+	background: #222;
+	padding: 4rem 0;
+	text-align: center;
+	p{
+		color: white;
+		font-size: rem-calc(20);
+	}
+	.button{
+		background: transparent;
+		border: 2px solid white;
+		color: white;
+		font-family: 'titilliumbold', sans-serif;
+		margin-bottom: 0;
+		text-transform: uppercase;
+		&:hover{
+			background: $cyan;
+			border: 2px solid $cyan;
+			color: #222;
+		}
+	}
+	.callout-first{
+		
+	}
+
+}

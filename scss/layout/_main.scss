@@ -5,22 +5,33 @@ body{
 }
 
 .l-main{
-	padding: 3em 0;
+	padding: 4em 0;
+	.not-front &{
+		padding: 4em 0;
+	}
 	.front &{
-		background: url(../images/front_bkgd.jpg) center 0 no-repeat;
-		height: 300px;
+		background: url(../images/front_bkgd_blue.jpg) center 0 no-repeat;
+		background-size: cover;
 		text-align: center;
 		h3{
+			color: white;
 			text-transform: uppercase;
-			font-weight: 700;
-			color: $dkred;
-			font-size: rem-calc(40);
-			line-height: 2.4rem;
+			font-size: rem-calc(54);
+			line-height: 3rem;
+			text-shadow: 0px 3px 3px rgba(0,0,0,.5);
 		}
 		h4{
-			font-family: 'Open Sans', sans-serif;
-			font-weight: 700;
-			color: #222;
+			font-family: 'titilliumregular', sans-serif;
+			font-size: rem-calc(34);
+			color: white;
+			text-shadow: 0px 3px 3px rgba(0,0,0,.5);
 		}
+	}
+	h2 {
+		font-size: 1.75rem;
+		line-height: 2rem;
+		border-bottom: 5px solid black;
+		text-transform: uppercase;
+		margin-bottom: 1rem;
 	}
 }

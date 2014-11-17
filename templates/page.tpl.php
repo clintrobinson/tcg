@@ -1,8 +1,18 @@
 <!--.page -->
 <div role="document" class="page">
-
+  <div class="l-tertiary hide-for-small">
+    <div class="row">
+      <div class="large-12 columns">
+        <p>Saskatoon, SK</p>
+        <ul>
+          <li><a class="find-us" href="">Find Us</a></li>
+          <li><a class="contact-us" href="">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
   <!--.l-header region -->
-  <header role="banner" >
+  <header role="banner" class="l-banner">
 
     <?php if ($top_bar): ?>
       <!--.top-bar -->
@@ -28,18 +38,17 @@
       <?php endif; ?>
       <!--/.top-bar -->
     <?php endif; ?>
-    <div class="top-info">
-      <p><img src="/TCG/sites/all/themes/TCG/images/wheat.png" alt="">Saskatchewan Owned and Operated</p>
-    </div>
+
     <!-- Title, slogan and menu -->
     <?php if ($alt_header): ?>
     
-    <section class=" <?php print $alt_header_classes; ?> l-header">
+    <section class=" <?php print $alt_header_classes; ?> l-header group">
+      <div class="nav-toggle hide-for-medium-up"><span></span></div>
       <div class="row">
-        <div class="large-3 columns">
+        <div class="large-3 medium-3 small-12 columns">
           <?php if ($linked_logo): print $linked_logo; endif; ?>
         </div>
-        <div class="large-9 columns">
+        <div class="large-9 medium-9 small-12 nav-wrap columns">
           <?php if ($site_name): ?>
             <?php if ($title): ?>
               <div id="site-name" class="element-invisible">
@@ -62,7 +71,9 @@
             <?php if ($alt_main_menu): ?>
               <nav class="l-nav" id="main-menu" class="navigation" role="navigation">
                 <?php print ($alt_main_menu); ?>
+
               </nav> <!-- /#main-menu -->
+
             <?php endif; ?>
           </div>
           </div>
@@ -70,6 +81,25 @@
       </div>
       
       
+    </section>
+    <section class=" <?php print $alt_header_classes; ?> l-header-animated animated-header group">
+      <div class="row">
+        <div class="large-2 medium-2 small-12 columns">
+          <?php if ($linked_logo): print $linked_logo; endif; ?>
+        </div>
+        <div class="large-10 medium-10 small-12 nav-wrap columns">
+          
+          <div class="row collapse">
+            <div class="large-12 columns">
+            <?php if ($alt_main_menu): ?>
+              <nav class="l-nav-alt" id="main-menu" class="navigation" role="navigation">
+                <?php print ($alt_main_menu); ?>
+              </nav> <!-- /#main-menu -->
+            <?php endif; ?>
+          </div>
+          </div>
+        </div>
+      </div>
     </section>
     
     <?php if ($alt_secondary_menu): ?>
@@ -80,33 +110,25 @@
     <?php endif; ?>
     <!-- End title, slogan and menu -->
 
-    
+    <?php if (!empty($page['featured'])): ?>
+      <!--/.featured -->
+      <section class="l-featured ">
+        <div class="overlay"></div>
+        <div class="row">
+          <div class="large-12 columns">
+            <?php print render($page['featured']); ?>
+          </div>
+        </div>
+      </section>
+      <!--/.l-featured -->
+    <?php endif; ?>
 
   </header>
   <!--/.l-header -->
 
-  <?php if (!empty($page['featured'])): ?>
-    <!--/.featured -->
-    <section class="l-featured ">
-      <div class="overlay"></div>
-      <div class="row">
-        <div class="large-12 columns">
-          <?php print render($page['featured']); ?>
-        </div>
-      </div>
-    </section>
-    <!--/.l-featured -->
-  <?php endif; ?>
+  
 
-  <?php if (!empty($page['header'])): ?>
-    <!--.l-header-region -->
-    <section class="l-header-region row">
-      <div class="large-12 columns">
-        <?php print render($page['header']); ?>
-      </div>
-    </section>
-    <!--/.l-header-region -->
-  <?php endif; ?>
+  
 
   <?php if (!empty($page['help'])): ?>
     <!--/.l-help -->
@@ -118,6 +140,23 @@
     <!--/.l-help -->
   <?php endif; ?>
 
+  <?php if (!empty($page['triptych_first']) || !empty($page['triptych_middle']) || !empty($page['triptych_last'])): ?>
+    <!--.triptych-->
+    <section class="l-callout">
+      <div class="row">
+        <div class="callout-first large-4 medium-4 small-12 columns">
+          <?php print render($page['triptych_first']); ?>
+        </div>
+        <div class="callout-middle large-4 medium-4 small-12 columns">
+          <?php print render($page['triptych_middle']); ?>
+        </div>
+        <div class="callout-last large-4 medium-4 small-12 columns">
+          <?php print render($page['triptych_last']); ?>
+        </div>
+      </div>
+    </section>
+    <!--/.triptych -->
+  <?php endif; ?>
   <main role="main" class=" l-main">
     <?php if ($messages && !$zurb_foundation_messages_modal): ?>
       <!--/.l-messages -->
@@ -136,10 +175,8 @@
           </div>
         <?php endif; ?>
 
-        <a id="main-content"></a>
-
-        <?php if ($breadcrumb): print $breadcrumb; endif; ?>
-
+        
+        
         <?php if ($title && !$is_front): ?>
           <?php print render($title_prefix); ?>
           <h1 id="page-title" class="title"><?php print $title; ?></h1>
@@ -176,21 +213,7 @@
   </main>
   <!--/.main-->
 
-  <?php if (!empty($page['triptych_first']) || !empty($page['triptych_middle']) || !empty($page['triptych_last'])): ?>
-    <!--.triptych-->
-    <section class="l-triptych row">
-      <div class="triptych-first large-4 columns">
-        <?php print render($page['triptych_first']); ?>
-      </div>
-      <div class="triptych-middle large-4 columns">
-        <?php print render($page['triptych_middle']); ?>
-      </div>
-      <div class="triptych-last large-4 columns">
-        <?php print render($page['triptych_last']); ?>
-      </div>
-    </section>
-    <!--/.triptych -->
-  <?php endif; ?>
+  
 
   <?php if (!empty($page['footer_firstcolumn']) || !empty($page['footer_secondcolumn']) || !empty($page['footer_thirdcolumn']) || !empty($page['footer_fourthcolumn'])): ?>
     <!--.footer-columns -->

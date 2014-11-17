@@ -1,0 +1,48 @@
+.webform-client-form{
+	text-align: left;
+	.form-item{
+		
+		input{
+			background: #222;
+			color: white;
+			border: 2px solid white;
+			&:focus{
+				border: 2px solid $cyan;
+				background: #222;
+				box-shadow: none;
+			}
+		}
+		textarea{
+			background: #222;
+			color: white;
+			border: 2px solid white;
+			&:focus{
+				border: 2px solid $cyan;
+				background: #222;
+				box-shadow: none;
+			}
+		}
+		label{
+			font-family: 'titilliumregular', sans-serif;
+			color: white;
+		}
+		.grippie{
+			display: none;
+		}
+		
+	}
+	.button{
+		@extend %default-transition;
+		background: $cyan;
+		border: 2px solid $cyan;
+		border-radius: 0;
+		color: white;
+		font-family: 'titilliumregular', sans-serif;
+		padding: 0.5rem 1rem;
+		&:hover{
+			color: white;
+			background: #222;
+			border: 2px solid white;
+		}
+	}	
+}

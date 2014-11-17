@@ -1,0 +1,9 @@
+// Non-modular or client styles for .l-featured region.
+
+.l-banner{
+	background: url(../images/main-bg.jpg) top center no-repeat;
+	background-size: cover;
+	.not-front &{
+		background: black;
+	}
+}

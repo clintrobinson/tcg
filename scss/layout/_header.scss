@@ -2,9 +2,15 @@
 
 .l-header{
 	padding: 1.5rem 0;
-	background: white;
+	background-color: #222;
+	@media #{$medium-up}{
+		background: none;
+	}
 	.logo{
-		
+		width: 100px;
+		@media #{$medium-up}{
+			width: auto;
+		}
 	}
 	.tertiary{
 		p{
@@ -18,3 +24,19 @@
 		}
 	}
 }
+
+.l-header-animated{
+	@extend %default-transition;
+	background-color: black;
+	height: auto;
+	overflow: hidden;
+	padding: 1rem 0;
+	position: fixed;
+	top: -100px;
+	width: 100%;
+	z-index:50;
+	&.animated-header-shrink{
+		top: 0px;
+	}
+}
+

@@ -1,0 +1,41 @@
+// Non-modular or client styles for modifications.
+.page-modifications{
+	.views-row{
+		@include grid-row();
+		max-width: 75rem;
+		margin-bottom: 1rem;
+		.title{
+			@include grid-column(12);
+
+			h2 {
+				font-size: 1.75rem;
+				line-height: 2rem;
+				border-bottom: 5px solid black;
+				text-transform: uppercase;
+				margin-bottom: 1rem;
+			}
+		}
+		.field-content{
+			@include grid-column(12);
+			@media #{$medium-up}{
+				@include grid-column(
+			    // Control the number of columns
+			    $columns:8,
+			    
+			    $push:4
+				);
+			}
+		}
+		.field-mod-image{
+			@include grid-column(12);
+			@media #{$medium-up}{
+				@include grid-column(
+			    // Control the number of columns
+			    $columns:4,
+			    
+			    $pull:8
+				);
+			}
+		}
+	}	
+}

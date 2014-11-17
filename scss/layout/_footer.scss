@@ -1,12 +1,29 @@
 // Non-modular or client styles for .l-footer region.
 
 .l-footer{
-	background: url(../images/header_bkgd.png) repeat;
-	padding: 2rem 0;
+	background: #222;
+	color: white;
+	padding: 2rem 0 0;
+	text-align: center;
+	h2{
+		font-family: 'titilliumregular', sans-serif;
+		font-size: rem-calc(34);
+		color: white;
+		margin-bottom: 1rem;
+	}
+	h3{
+		font-family: 'titilliumregular', sans-serif;
+		font-size: rem-calc(24);
+		color: white;
+		margin-bottom: 0.5rem;
+	}
 	.block{
 		@include grid-column(12);
 		@media #{$medium-up}{
 			@include grid-column(4);
 		}
+	}
+	.copyright{
+		font-size: .75rem;
 	}
 }

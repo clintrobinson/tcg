@@ -30,6 +30,7 @@ base theme = zurb_foundation
 ; stylesheets[all][] = css/app.css
 ; Comment the app.css file (above) if you're using sass to preprocess css:
 stylesheets[all][] = css/TCG.css
+stylesheets[all][] = css/jquery-ui.min.css
 
 ; Block loading of foundation.min.css from the base theme. This file should either
 ; not exist or be blank in your subtheme. See https://drupal.org/node/263967
@@ -46,6 +47,9 @@ scripts[] = js/vendor/modernizr.js
 ; can comment this line and uncomment the ones below you want.
 scripts[] = js/foundation.min.js
 scripts[] = js/vendor/skrollr.min.js
+scripts[] = js/jquery-ui.min.js
+scripts[] = js/classie.js
+scripts[] = js/animatedheader.min.js
 
 ; Foundation framework scripts (uncompressed).
 ;scripts[] = js/foundation/foundation.js
@@ -60,7 +64,7 @@ scripts[] = js/vendor/skrollr.min.js
 ;scripts[] = js/foundation/foundation.magellan.js
 ;scripts[] = js/foundation/foundation.offcanvas.js
 ;scripts[] = js/foundation/foundation.orbit.js
-;scripts[] = js/foundation/foundation.reveal.js
+scripts[] = js/foundation/foundation.reveal.js
 ;scripts[] = js/foundation/foundation.tab.js
 ;scripts[] = js/foundation/foundation.tooltip.js
 ;scripts[] = js/foundation/foundation.topbar.js
