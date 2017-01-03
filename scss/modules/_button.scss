@@ -1,3 +1,14 @@
-button, .button{
+button, .button, .btn{
 	background-color: $cyan;
+	padding: .5rem 2rem .5rem;
+	text-decoration: none;
+	margin: 1rem 0;
+	font-size: 1rem;
+	color: white;
+	border: none;
+	font-family: "titilliumregular", sans-serif;
+}
+
+.calculate-btn{
+	margin-top: 0;
 }

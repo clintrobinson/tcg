@@ -3,7 +3,44 @@
 .l-banner{
 	background: url(../images/main-bg.jpg) top center no-repeat;
 	background-size: cover;
+	position: relative;
+	overflow: hidden;
 	.not-front &{
-		background: black;
+		//background: black;
+		.slider{
+			display: none;
+		}
+	}
+	.slick-slide{
+	  height: 100%;
+	  min-height: 600px;
+	  img {
+	    max-width: none;
+	    display: block;
+	  }
+	}
+	.slider{
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		margin-bottom: 0;
+		z-index: 1;
+		.slide1{
+
+			width: 100%;
+			background: url(../images/header-image-1.jpg) center center no-repeat;
+			background-size: cover;
+		}
+		.slide2{
+			width: 100%;
+			background: url(../images/header-image-4.png) center center no-repeat;
+			background-size: cover;
+		}
+		.slide3{
+			width: 100%;
+			background: url(../images/header-image-5.jpg) center center no-repeat;
+			background-size: cover;
+		}
 	}
 }

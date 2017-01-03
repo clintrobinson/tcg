@@ -1,0 +1,68 @@
+// Non-modular or client styles for .l-featured region.
+.clearing-container{
+	z-index: 500;
+}
+.carousel{
+	ul{
+		list-style-type: none;
+		li{
+			border: 3px solid white;
+			background: none;
+			padding-left: 0c;
+		}
+	}
+}
+
+
+.field-gallery-image.field-wrapper {
+	display: inline-block;
+	padding: 5px;
+	margin: 5px;
+	background: black;
+	border: 3px solid white;
+	@extend %default-transition;
+	&:hover{
+		border: 3px solid $cyan;
+	}
+}
+
+#bottomNavClose {
+	display: block;
+	background: url('../images/lightbox-close.jpg') left no-repeat;
+	position: absolute;
+	bottom: 10px;
+	right: 0;
+	&:hover{
+		background: url('../images/lightbox-close.jpg') left no-repeat;
+	}
+}
+
+#imageData #bottomNav {
+position: relative;
+
+}
+
+#prevLink:hover, #prevLink:visited:hover, #prevLink.force_show_nav, #framePrevLink {
+	background: url(../images/prev.jpg) left 50% no-repeat;
+	opacity: 1;
+}
+#prevLink{
+	background: url(../images/prev.jpg) left 50% no-repeat;
+	opacity: 0;
+}
+#nextLink:hover, #nextLink:visited:hover, #nextLink.force_show_nav, #frameNextLink {
+	background: url(../images/next.jpg) right 50% no-repeat;
+	opacity: 1;
+}
+#nextLink{
+	background: url(../images/next.jpg) right 50% no-repeat;
+	opacity: 0;
+}
+
+#imageData #imageDetails #caption{
+	font-family: 'titillium', sans-serif;
+	font-size: 1rem;
+	font-weight: normal;
+	line-height: 1;
+}
+

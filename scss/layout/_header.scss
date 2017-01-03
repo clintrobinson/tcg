@@ -1,9 +1,14 @@
 // Non-modular or client styles for .l-header region.
 
 .l-header{
-	padding: 1.5rem 0;
+	padding: 1.5rem 0 0;
+		
 	background-color: #222;
+	position: relative;
+	z-index: 2;
+	font-size: .675rem;
 	@media #{$medium-up}{
+		padding: 1.5rem 0;
 		background: none;
 	}
 	.logo{
@@ -14,9 +19,14 @@
 	}
 	.tertiary{
 		p{
-			font-size: .75rem;
+			font-size: .675rem;
 			margin-bottom: 0;
 			margin-top: .5rem;
+			.business-list {
+				a{
+					color: white;
+				}
+			}
 		}
 		img{
 			margin-right: .25rem;
@@ -27,7 +37,7 @@
 
 .l-header-animated{
 	@extend %default-transition;
-	background-color: black;
+	background-color: #222;
 	height: auto;
 	overflow: hidden;
 	padding: 1rem 0;

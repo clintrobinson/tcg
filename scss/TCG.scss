@@ -26,18 +26,24 @@
 
 // Make sure the charset is set appropriately
 @charset "UTF-8";
+//
+// Foundation customization
+//
+@import "base/setup";  
+// to override sass variables, you need to declare them first
+// because SASS !default is the 'fallback' for unset vars
+// (see: http://robots.thoughtbot.com/sass-default)
+@import "base/settings";
+// @import "mixins";
 
-// Core
-// The following imports bootstrap the theme.
-// You may comment out bourbon if you don't want to use its library of mixins.
-// The theme will have compilation errors if Foundation is not imported.
 
-// Global Zurb Foundation variables.
-@import "vendor/foundation/variables";
-// Comment out this import if you don't want to use normalize.
-@import "vendor/foundation/normalize";
-// Comment out this import below if you are customizing you imports below.
-@import "vendor/foundation/foundation";
+//
+// Libraries
+//
+//@import "vendor/normalize";
+//@import "vendor/foundation";
+@import "../raw/bower/foundation/scss/foundation/settings.scss";
+@import "../raw/bower/foundation/scss/foundation.scss";
 // Comment out this import if you don't want to use Bourbon, a replacement for Compass mixins.
 @import "bourbon";
 
@@ -73,9 +79,12 @@
 @import "layout/aside";
 @import "layout/footer";
 @import "layout/tertiary";
+@import "layout/sales";
 @import "layout/rentals";
 @import "layout/modifications";
 @import "layout/storage";
+@import "layout/delivery";
+@import "layout/gallery";
 
 // Modules
 // @import "modules/block";
@@ -84,6 +93,7 @@
 @import "modules/m-Footable";
 @import "modules/form";
 @import "modules/table";
+@import "modules/slick";
 
 // States
 // @import "states/collapse";

@@ -74,10 +74,10 @@
 
 a{
 	@extend %default-transition;
-	color: $cyan;
+	color: darken($cyan, 20%);
 	font-family: 'titilliumregular', sans-serif;
 	&:hover{
-		color: darken($cyan, 20%);
+		color: darken($cyan, 40%);
 	}
 }
 
@@ -89,12 +89,20 @@ p{
 	font-family: 'titilliumregular', sans-serif;
 }
 
-*{
+body{
     font-family: 'titilliumregular', sans-serif;
 }
 
 h1#page-title {
-    background: black;
+    background: #222;
+    border-left: 10px solid #1DDBD9;
+    line-height: 3rem;
+    color: white;
+    padding: 0.5rem 1rem .75rem;
+    margin-bottom: 1rem;
+}
+.l-main h1 {
+    background: #222;
     border-left: 10px solid #1DDBD9;
     line-height: 3rem;
     color: white;
@@ -112,7 +120,17 @@ h1#page-title {
     }    
 }
 
+.l-main .button-group{
+    list-style-type: none;
+    li{
+        background: none;
+        padding-left: 0;
+    }
+}
 
+b, strong{
+    font-family: 'titilliumbold';
+}
 .group:after {
   content: "";
   display: table;

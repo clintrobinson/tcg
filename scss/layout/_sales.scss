@@ -1,0 +1,29 @@
+.page-sales{
+	.view-containers{
+		padding-left: 0.9375rem;
+		padding-right: 0.9375rem;
+	}
+}
+
+.page-salespricing{
+	.pricing-chart{
+		max-width: 71rem;
+		margin: 0 auto;
+	}
+	h2.node-title{
+		display: none;
+	}
+	.sales-gallery{
+		h2{
+			background: #222;
+		    border-left: 10px solid #1DDBD9;
+		    line-height: 3rem;
+		    color: white;
+		    padding: 0.5rem 1rem .75rem;
+		    margin-bottom: 1rem;
+		    border-bottom: none;
+		    text-transform: none;
+		    font-size: 2.75rem;
+		}
+	}
+}
