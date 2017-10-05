@@ -3,38 +3,46 @@
 	input[type="file"], input[type="checkbox"], input[type="radio"], select{
 		margin: 0 0 0.25rem 0;
 	}
-	.form-item{
+	.form-item {
 		
-		input{
+		input {
 			max-width: 100%;
 			background: #222;
 			color: white;
 			border: 2px solid white;
-			padding: .5rem;
+			padding: 0 .5rem;
+			height: 40px;
+			vertical-align: middle;
 			width: 100%;
 			&:focus{
 				border: 2px solid $cyan;
 				background: #222;
 				box-shadow: none;
+				outline: none;
 			}
 		}
-		input[type=checkbox]{
-			display: inline;
-			width: auto;
-		}
-		input[type=radio]{
+
+		input[type=checkbox] {
 			display: inline;
 			width: auto;
 		}
 
-		textarea{
+		input[type=radio] {
+			display: inline;
+			width: auto;
+		}
+
+		textarea {
 			background: #222;
 			color: white;
 			border: 2px solid white;
-			&:focus{
+			padding: .5rem;
+			
+			&:focus {
 				border: 2px solid $cyan;
 				background: #222;
 				box-shadow: none;
+				outline: none;
 			}
 		}
 		label{

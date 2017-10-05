@@ -68,8 +68,8 @@
 			background: $black;
 			color: white;
 			border: 2px solid $cyan;
-			&:hover{
-				background: rgba($cyan, 10%);
+			&:hover {
+				background: rgba($cyan, .1);
 			}
 		}
 		&.active>a {

@@ -3,7 +3,7 @@
   <div class="l-tertiary hide-for-small">
     <div class="row">
       <div class="large-12 columns">
-        <p class="business-list"><a href="/salespricing">Saskatoon, SK</a> | <a href="/medicinehatsalespricing">Medicine Hat, AB</a> | <a href="/lloydminstersalespricing">Lloydminster, SK</a> | <a href="/reginasalespricing">Regina, SK</a> | <a href="/calgarysalespricing">Calgary, AB</a> | <a href="/edmontonsalespricing">Edmonton, AB</a></p>
+        <p class="business-list"><a href="/salespricing">Saskatoon, SK</a> | <a href="/medicinehatsalespricing">Medicine Hat, AB</a> | <a href="/lloydminstersalespricing">Lloydminster, SK</a> | <a href="/reginasalespricing">Regina, SK</a> | <a href="/calgarysalespricing">Calgary, AB</a> | <a href="/edmontonsalespricing">Edmonton, AB</a> | <a href="/swiftcurrentsalespricing">Swift Current, SK</a></p>
         <ul>
           <li><a class="find-us" href="">Find Us</a></li>
           <li><a class="contact-us" href="/contact-us">Contact Us</a></li>

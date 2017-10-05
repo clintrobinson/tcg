@@ -12,3 +12,12 @@ button, .button, .btn{
 .calculate-btn{
 	margin-top: 0;
 }
+
+.l-main .button-group { 
+    list-style-type: none;
+    li{
+        background: none;
+        padding-left: 0;
+        display: inline-block;
+    }
+}

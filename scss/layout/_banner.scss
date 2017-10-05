@@ -1,7 +1,7 @@
 // Non-modular or client styles for .l-featured region.
 
 .l-banner{
-	background: url(../images/main-bg.jpg) top center no-repeat;
+	background: url('../images/main-bg.jpg') top center no-repeat;
 	background-size: cover;
 	position: relative;
 	overflow: hidden;
@@ -29,17 +29,17 @@
 		.slide1{
 
 			width: 100%;
-			background: url(../images/header-image-1.jpg) center center no-repeat;
+			background: url('../images/header-image-1.jpg') center center no-repeat;
 			background-size: cover;
 		}
 		.slide2{
 			width: 100%;
-			background: url(../images/header-image-4.png) center center no-repeat;
+			background: url('../images/header-image-4.png') center center no-repeat;
 			background-size: cover;
 		}
 		.slide3{
 			width: 100%;
-			background: url(../images/header-image-5.jpg) center center no-repeat;
+			background: url('../images/header-image-5.jpg') center center no-repeat;
 			background-size: cover;
 		}
 	}

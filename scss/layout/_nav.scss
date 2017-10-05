@@ -1,8 +1,13 @@
 // Non-modular or client styles for the .l-nav region.
 
-.l-nav, .l-nav-alt{
-	text-align: right;
-	float: right;
+.l-nav, 
+.l-nav-alt {
+
+	@media #{$medium-up} { 
+		text-align: right;
+		float: right;
+	}
+
 	&:before {
 	  content: '';
 	  display: inline-block;

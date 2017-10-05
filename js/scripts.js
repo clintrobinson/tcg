@@ -86,7 +86,7 @@
 
         function deliveryEstimate(a, b, c){
           console.log('here');
-          if(a == 'saskatoon'){
+          if(a == 'saskatoon' || a == 'regina'){
             if(b == '20'){
               if(c <= 19){
                 $('.estimated-amount').html('$150');
@@ -109,7 +109,7 @@
                 $('.estimated-amount').html('$' + (c * 3.5));
               }
             }
-          } else if(a == 'medicine-hat'){
+          } else if(a == 'medicine-hat' || a == 'moose-jaw'){
             if(b == '20'){
               if(c <= 19){
                 $('.estimated-amount').html('$200');
